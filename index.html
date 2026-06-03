@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Crust Pizza – Easiest, Fastest and Tastiest</title>
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqTlsEANPAsC2HV155P_jU4q6cPCvR-FTZDA&s">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-pizza-slice"></i> The Crust Pizza
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="cart-icon ms-3" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title">Welcome to The Crust Pizza</h1>
+                    <p class="hero-subtitle">Our chefs are working 24/7 and are ready to accept visitors at any time of the day and night</p>
+                    <p class="hero-tagline">Easiest, Fastest and Tastiest</p>
+                    <a href="#menu" class="btn btn-primary btn-lg">Explore Menu</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&h=400&fit=crop" alt="Delicious Pizza" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <p class="section-subtitle">Discover our delicious selection</p>
+            
+            <!-- Menu Categories -->
+            <ul class="nav nav-pills menu-tabs mb-4 justify-content-center" id="menuTabs">
+                <li class="nav-item">
+                    <button class="nav-link active" data-category="all">All</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-category="pizza">Pizzas</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-category="pasta">Pasta</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-category="burger">Burgers</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-category="sides">Sides</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-category="deals">Deals</button>
+                </li>
+            </ul>
+
+            <div class="row menu-grid" id="menuGrid">
+                <!-- Menu items will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <p class="section-subtitle">What our customers say about us</p>
+            <div class="row reviews-grid" id="reviewsGrid">
+                <!-- Reviews will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <h2 class="section-title">Latest News</h2>
+            <p class="section-subtitle">Stay updated with our latest achievements</p>
+            <div class="row news-grid" id="newsGrid">
+                <!-- News will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Get in touch with us</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h3>Contact Info</h3>
+                        <p>With great prices, excellent service, and some of the best food you'll ever have…The Crust Pizza is "Just the Best There is!"</p>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Gujranwala</h4>
+                                <p>Billa Chowk, Satellite Town, Gujranwala</p>
+                                <p>Al-Merjan Center, Wapda Town</p>
+                                <p>Main Market Canal View</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Kharian</h4>
+                                <p>Main G.T Road Near Nadra Office</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Lahore</h4>
+                                <p>PIA Road, Johar Town</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Sheikhupura</h4>
+                                <p>Dil Chowk, Outfitter Basement</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Mirpur</h4>
+                                <p>Sky View Plaza, Near Y Cross Chowk</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone Numbers</h4>
+                                <p>Gujranwala: 0339 3770072, 055 373 0072</p>
+                                <p>Wapda Town: 0335 428 4090, 055 428 4090</p>
+                                <p>Canal View: 0331 428 5457, 055 428 5487</p>
+                                <p>Kharian: 0321 6144 002, 053 7532 632</p>
+                                <p>Lahore: 0309 111 90 81</p>
+                                <p>Sheikhupura: 0311 1000568</p>
+                                <p>Mirpur: 0311 1133070</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Opening Hours</h4>
+                                <p>Monday – Friday: 10 am – 10 pm</p>
+                                <p>Sunday: 11 am – 9 pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <a href="https://www.facebook.com/TheCrustPizzaPakistan" target="_blank" class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="https://twitter.com/TheCrustPizzaPakistan" target="_blank" class="social-btn twitter">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                        <a href="https://www.instagram.com/TheCrustPizzaPakistan/" target="_blank" class="social-btn instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; The Crust Pizza. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">Rs. 0</span>
+                </div>
+                <button class="btn btn-checkout" onclick="checkoutWhatsApp()">
+                    <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923393770072" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
